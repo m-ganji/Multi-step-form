@@ -26,129 +26,119 @@
     </style>
   </head>
   <body class="bg-gray-100">
-    <!-- <div
-      class="
-        w-9/12
-        border-2 border-solid border-red-600
-        block
-        m-auto
-        h-96
-        align-middle
-      "
-    >
-      sad
-    </div> -->
-    <!-- 
-    <div class="flex m-auto h-96 w-9/12 bg-indigo-600">
-      <div class="m-auto">
-        <h3>title</h3>
-        <button>button</button>
-      </div>
-    </div> -->
-
-    <!-- <div class="w-full h-full"> -->
     <div
       class="w-screen h-screen m-auto flex flex-col justify-center items-center"
     >
       <div class="w-3/5 h-3/4 bg-white rounded-lg flex">
-        <!-- <div class="w-1/5 m-2 relative">
-          <img src="./assets/images/bg-sidebar-desktop.svg" alt="" class="" />
-          <div class="absolute">
-            <p>1</p>
-          </div>
-        </div> -->
-
         <div
-          class="
-            widththirthyfive
-            relative
-            text-white
-            flex
-            justify-center
-            items-center
-          "
+          class="widththirthyfive relative text-white flex justify-center items-center"
         >
           <div class="info flex flex-col">
-            <div class="flex m-4 w-32">
+            <div class="flex m-4">
               <div
-                class="
-                  dot
-                  text-black
-                  m-auto
-                  flex
-                  justify-center
-                  items-center
-                  justify-start
-                "
+                class="dot text-black m-auto flex justify-center items-center w-1/2"
               >
                 1
               </div>
-              <div>
-                <p class="text-xs">STEP 1</p>
-                <strong class="text-xs">YOUR INFO</strong>
+              <div class="w-1/2">
+                <p class="text-xs text-blue-200">STEP 1</p>
+                <strong class="text-xs text-white">YOUR INFO</strong>
               </div>
             </div>
-            <div class="flex m-4 w-32">
+            <div class="flex m-4">
               <div
-                class="
-                  dot
-                  text-black
-                  m-auto
-                  flex
-                  justify-center
-                  items-center
-                  justify-start
-                "
+                class="dot text-black m-auto flex justify-center items-center w-1/2"
               >
                 2
               </div>
-              <div>
-                <p class="text-xs">STEP 2</p>
+              <div class="w-1/2">
+                <p class="text-xs text-blue-200">STEP 2</p>
                 <strong class="text-xs">SELECT PLAN </strong>
               </div>
             </div>
-            <div class="flex m-4 w-32">
+            <div class="flex m-4">
               <div
-                class="
-                  dot
-                  text-black
-                  m-auto
-                  flex
-                  justify-center
-                  items-center
-                  justify-start
-                "
+                class="dot text-black m-auto flex justify-center items-center w-1/2"
               >
                 3
               </div>
-              <div>
-                <p class="text-xs">STEP 3</p>
+              <div class="w-1/2">
+                <p class="text-xs text-blue-200">STEP 3</p>
                 <strong class="text-xs">ADD-ONS </strong>
               </div>
             </div>
-            <div class="flex m-4 w-32">
+            <div class="flex m-4">
               <div
-                class="
-                  dot
-                  text-black
-                  m-auto
-                  flex
-                  justify-center
-                  items-center
-                  justify-start
-                "
+                class="dot text-black m-auto flex justify-center items-center w-1/2"
               >
                 4
               </div>
-              <div>
-                <p class="text-xs">STEP 4</p>
+              <div class="w-1/2">
+                <p class="text-xs text-blue-200">STEP 4</p>
                 <strong class="text-xs">SUMMARY</strong>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="widthsixtyfive">2</div>
+        <div class="widthsixtyfive h-full">
+          <form action="" class="flex flex-col w-full p-10">
+            <strong class="text-4xl flex justify-center">Personal info </strong>
+            <p class="text-sm mb-6">
+              Please provide your name, email address,<br />
+              and phone number.
+            </p>
+
+            <div class="flex">
+              <label for="text" class="w-1/2">Name</label>
+              <p class="error1 flex justify-end text-red-400 w-1/2">
+                This field is required
+              </p>
+            </div>
+            <div class="w-full mt-2">
+              <input
+                type="text"
+                placeholder="e.g. Stephen King"
+                class="element1 border-2 border-solid border-gray-400 rounded-lg w-full h-10 mb-6 p-3"
+              />
+            </div>
+
+            <div class="flex">
+              <label for="text" class="w-1/2">Email Address</label>
+              <p class="flex justify-end text-red-400 w-1/2">
+                This field is required
+              </p>
+            </div>
+
+            <div class="w-full mt-2">
+              <input
+                type="text"
+                placeholder="e.g. stephenking@lorem.com"
+                class="border-2 border-solid border-gray-400 rounded-lg w-full h-10 mb-6 p-3"
+              />
+            </div>
+            <div class="flex">
+              <label for="text" class="w-1/2">Phone Number</label>
+              <p class="flex justify-end text-red-400 w-1/2">
+                This field is required
+              </p>
+            </div>
+            <div class="w-full mt-2 mb-10">
+              <input
+                type="text"
+                placeholder="e.g. + 1 234 567 890"
+                class="border-2 border-solid border-gray-400 rounded-lg w-full h-10 mb-6 p-3"
+              />
+            </div>
+            <div class="flex justify-end">
+              <input
+                type="submit"
+                value="Next Step"
+                class="bg-blue-600 w-1/3 text-white h-12 rounded-lg cursor-pointer"
+              />
+            </div>
+          </form>
+        </div>
       </div>
       <div class="attribution">
         Challenge by
@@ -157,13 +147,16 @@
         >. Coded by <a href="#">Mohamad Ganji</a>.
       </div>
     </div>
-    <!-- </div> -->
 
-    <!-- <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Mohamad Ganji</a>.
-    </div> -->
+    <script>
+      function myFunction() {
+        var x = document.querySelector("element1");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+    </script>
   </body>
 </html>
