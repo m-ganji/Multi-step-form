@@ -1,0 +1,28 @@
+.info {
+  background-image: url(/assets/images/bg-sidebar-desktop.svg);
+  border-radius: 0.5rem /* 8px */;
+  width: 85%;
+  height: 95%;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.widththirthyfive {
+  width: 35%;
+}
+.widthsixtyfive {
+  width: 65%;
+}
+.tenpercent {
+  width: 10%;
+}
