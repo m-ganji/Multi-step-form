@@ -81,8 +81,12 @@
           </div>
         </div>
 
-        <div class="widthsixtyfive h-full">
-          <form action="" class="flex flex-col w-full p-10 form1 actived">
+        <div id="container" class="widthsixtyfive h-full">
+          <form
+            action=""
+            id="form"
+            class="flex flex-col w-full p-10 form1 actived"
+          >
             <strong class="text-4xl">Personal info </strong>
             <p class="text-sm mb-6">
               Please provide your name, email address,<br />
@@ -134,21 +138,8 @@
               />
             </div>
           </form>
-          <div class="flex justify-end">
-            <button
-              class="bg-blue-600 tenpercent text-white h-12 rounded-lg cursor-pointer bottomtwenty right-1/4 fixed p-5 flex justify-center items-center"
-              onclick="changepage1();changepage2();"
-            >
-              Next Step
-            </button>
-            <!-- <input
-              type="submit"
-              value="Next Step"
-              
-            /> -->
-            <!-- <button >sss</button> -->
-          </div>
-          <div class="h-full page2 flex-col p-10 actived">
+
+          <div class="page2 h-full flex-col p-10 hidden">
             <strong class="text-4xl">Select your plan </strong>
             <p class="text-sm mb-5">
               You have the option of monthly or yearly billing.
@@ -196,8 +187,16 @@
             </div>
           </div>
 
-          <div class="page3 actived">asdsa</div>
-          <div class="page4 actived">aaaa</div>
+          <div class="page3 hidden">asdsa</div>
+          <div class="page4 hidden">aaaa</div>
+        </div>
+        <div class="flex justify-end">
+          <button
+            class="bg-blue-600 tenpercent text-white h-12 rounded-lg cursor-pointer bottomtwenty right-1/4 fixed p-5 flex justify-center items-center"
+            onclick="changepage1()"
+          >
+            Next Step
+          </button>
         </div>
       </div>
       <div class="attribution">
@@ -214,53 +213,24 @@
       const page3 = document.querySelector(".page3");
       const page4 = document.querySelector(".page4");
 
-      page2.style.display = "none";
-      page3.style.display = "none";
-      page4.style.display = "none";
-
-      const selector = {
-        First: true,
-        Second: false,
-        Third: false,
-        Fourth: false,
-      };
-
-      selector["First"] = true;
-      let A;
-      if (selector["First"]) {
-        A = <strong class="text-4xl">Personal info </strong>;
-      }
-
-      // function change1() {
-      //   form1.style.display = "flex";
-      //   page2.style.display = "none";
-      //   page3.style.display = "none";
-      //   page4.style.display = "none";
-      // }
-
-      // function change2() {
-      //   form1.style.display = "none";
-      //   page2.style.display = "flex";
-      //   page3.style.display = "none";
-      //   page4.style.display = "none";
-      // }
-      // function change3() {
-      //   form1.style.display = "none";
-      //   page2.style.display = "none";
-      //   page3.style.display = "flex";
-      //   page4.style.display = "none";
-      // }
-      // function change4() {
-      //   form1.style.display = "none";
-      //   page2.style.display = "none";
-      //   page3.style.display = "none";
-      //   page4.style.display = "flex";
-      // }
-
       function changepage1() {
-        if ((form1.style.display = "none")) {
-          change2();
-          console.log(form1.style.display);
+        const container_node = document.querySelector("#container").children;
+        console.log(container_node);
+
+        let index;
+        for (var i = 0; i < container_node.length; i++) {
+          console.log(container_node[i]);
+          if (container_node[i].classList.contains("actived")) {
+            container_node[i].classList.remove("actived");
+            container_node[i].classList.add("hidden");
+            index = i + 1;
+            console.log("index", i + 1);
+          }
+          if (i == index) {
+            // child.classList.remove("actived");
+            container_node[i].classList.remove("hidden");
+            container_node[i].classList.add("actived");
+          }
         }
       }
 

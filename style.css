@@ -26,3 +26,6 @@ body {
 .bottomtwenty {
   bottom: 20%;
 }
+.actived {
+  display: block;
+}
